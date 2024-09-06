@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: node-hello-sample
-          image: ausaf0909/node-sample:master-c379cb7c618c5aefa9b481a08ed0b13ffc12a1ff # Replace with your actual Docker image and tag
+          image: ausaf0909/node-sample:master-f1896901c69dbe341ae7311206c0edda9a25b300 # Replace with your actual Docker image and tag
           ports:
             - containerPort: 3000
           resources:
@@ -27,7 +27,6 @@ spec:
             requests:
               memory: "256Mi"
               cpu: "250m"
-        
 ---
 apiVersion: v1
 kind: Service
@@ -45,4 +44,4 @@ spec:
   template:
     spec:
       containers:
-        - image: ausaf0909/node-sample:master-c379cb7c618c5aefa9b481a08ed0b13ffc12a1ff
+        - image: ausaf0909/node-sample:master-f1896901c69dbe341ae7311206c0edda9a25b300
