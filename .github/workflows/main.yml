@@ -95,6 +95,4 @@ jobs:
           git push --set-upstream origin master
 
 
-      - name: Apply Kubernetes manifests
-        run: |
-          kubectl apply -f deployment.yaml
+     
