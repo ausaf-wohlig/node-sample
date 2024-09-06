@@ -80,7 +80,7 @@ jobs:
 
           git config user.email "$GITHUB_ACTOR@gmail.com"
 
-          yq eval '.spec.template.spec.containers[0].image = "ausaf0909/node-sample:${{ env.GITHUB_BRANCH }}"' -i deployment.
+          yq eval '.spec.template.spec.containers[0].image = "ausaf0909/node-sample:${{ env.GITHUB_BRANCH }}"' -i deployment.yaml
 
 
 
