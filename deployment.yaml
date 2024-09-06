@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-sample
+  namespace: minikube
+  labels:
+    app: node-sample
+spec:
+  replicas: 1 # Number of pod replicas
+  selector:
+    matchLabels:
+      app: node-hello-sample
+  template:
+    metadata:
+      labels:
+        app: node-hello-sample
+    spec:
+      containers:
+      - name: node-hello-sample
+        image: ausaf0909/node-sample:latest # Replace with your actual Docker image and tag
+        ports:
+        - containerPort: 3000
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 10
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
