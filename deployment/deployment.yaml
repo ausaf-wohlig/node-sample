@@ -6,7 +6,7 @@ metadata:
   labels:
     app: node-sample
 spec:
-  replicas: 1 
+  replicas: 1
   selector:
     matchLabels:
       app: node-hello-sample
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: node-hello-sample
-          image: ausaf0909/node-sample:master-869ebf0ef5049cbd06a0a9f0643f944d3d647d34 # Replace with your actual Docker image and tag
+          image: ausaf0909/node-sample:master-c379cb7c618c5aefa9b481a08ed0b13ffc12a1ff # Replace with your actual Docker image and tag
           ports:
             - containerPort: 3000
           resources:
@@ -56,4 +56,4 @@ spec:
   template:
     spec:
       containers:
-        - image: ausaf0909/node-sample:master-869ebf0ef5049cbd06a0a9f0643f944d3d647d34
+        - image: ausaf0909/node-sample:master-c379cb7c618c5aefa9b481a08ed0b13ffc12a1ff
