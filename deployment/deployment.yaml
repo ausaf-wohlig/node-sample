@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: node-hello-sample
-          image: ausaf0909/node-sample:master-f1896901c69dbe341ae7311206c0edda9a25b300 # Replace with your actual Docker image and tag
+          image: ausaf0909/node-sample:master-4661da7816a629e3a8e9e4e3e2e8be3a2d8d6e9a # Replace with your actual Docker image and tag
           ports:
             - containerPort: 3000
           resources:
@@ -44,4 +44,4 @@ spec:
   template:
     spec:
       containers:
-        - image: ausaf0909/node-sample:master-f1896901c69dbe341ae7311206c0edda9a25b300
+        - image: ausaf0909/node-sample:master-4661da7816a629e3a8e9e4e3e2e8be3a2d8d6e9a
