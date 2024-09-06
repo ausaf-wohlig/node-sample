@@ -16,30 +16,29 @@ spec:
         app: node-hello-sample
     spec:
       containers:
-      - name: node-hello-sample
-        image: ausaf0909/node-sample:latest # Replace with your actual Docker image and tag
-        ports:
-        - containerPort: 3000
-        resources:
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
-          requests:
-            memory: "256Mi"
-            cpu: "250m"
-        readinessProbe:
-          httpGet:
-            path: /
-            port: 3000
-          initialDelaySeconds: 10
-          periodSeconds: 5
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 3000
-          initialDelaySeconds: 30
-          periodSeconds: 10
-
+        - name: node-hello-sample
+          image: ausaf0909/node-sample:master-e1bf314c80771907d7b6899cc79acfa79577055d # Replace with your actual Docker image and tag
+          ports:
+            - containerPort: 3000
+          resources:
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+          readinessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 3000
+            initialDelaySeconds: 30
+            periodSeconds: 10
 ---
 apiVersion: v1
 kind: Service
@@ -54,3 +53,7 @@ spec:
       port: 80
       targetPort: 3000
   type: NodePort
+  template:
+    spec:
+      containers:
+        - image: ausaf0909/node-sample:master-e1bf314c80771907d7b6899cc79acfa79577055d
