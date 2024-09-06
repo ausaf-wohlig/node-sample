@@ -35,12 +35,12 @@ metadata:
   namespace: minikube
 spec:
   selector:
-    app: node-hello
+    app: node-hello-sample
   ports:
     - protocol: TCP
       port: 80
       targetPort: 3000
-  type: ClusterIP
+  type: NodePort
   template:
     spec:
       containers:
