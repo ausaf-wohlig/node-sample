@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: node-hello-sample
-          image: ausaf0909/node-sample:master-9978e265b9dd278df3535e48ddd5adbb1aa18abb # Replace with your actual Docker image and tag
+          image: ausaf0909/node-sample:master-f67c1350de57d8d6ae897930c9747ddad0fe2d4f # Replace with your actual Docker image and tag
           ports:
             - containerPort: 3000
           resources:
@@ -27,4 +27,3 @@ spec:
             requests:
               memory: "256Mi"
               cpu: "250m"
-
