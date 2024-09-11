@@ -1,4 +1,4 @@
-FROM node:20-bullseye-slim
+FROM --platform=linux/arm64 node:20-bullseye-slim
 WORKDIR /app
 
 COPY package*.json ./
