@@ -4,8 +4,8 @@ name: Build, Push, and Deploy
 
 
 on:
-
-  push:
+  workflow_dispatch:
+  # push:
 
     branches:
 
