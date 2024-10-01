@@ -2,7 +2,7 @@ name: Test Action
 
 on:
   workflow_dispatch:
-  # push:
+  # push test:
     branches:
       - test
 
