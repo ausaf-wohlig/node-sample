@@ -6,7 +6,7 @@ on:
       branch:
         description: 'Branch to run the workflow on'
         required: true
-        default: 'test'
+        default: 'master'
 
 jobs:
   build-and-deploy:
