@@ -9,7 +9,7 @@ on:
         default: 'test'
       tag:
         description: 'Tag to run the workflow with (optional)'
-        required: false
+        required: true
 
 jobs:
   build-and-deploy:
