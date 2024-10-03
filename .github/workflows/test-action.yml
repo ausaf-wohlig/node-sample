@@ -41,4 +41,4 @@ jobs:
           git pull
           git add .
           git commit -m "updating newer image"
-          git push --set-upstream origin master
+          git push --set-upstream origin test
