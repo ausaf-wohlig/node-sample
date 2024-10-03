@@ -7,6 +7,9 @@ on:
         description: 'Branch to run the workflow on'
         required: true
         default: 'test'
+      tag:
+        description: 'Tag to run the workflow with (optional)'
+        required: false
 
 jobs:
   build-and-deploy:
