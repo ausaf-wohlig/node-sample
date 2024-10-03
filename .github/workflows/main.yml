@@ -32,10 +32,9 @@ jobs:
         run: |
           echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login --username ausaf0909 --password-stdin
           docker push ausaf0909/node-sample:$GITHUB_REF_NAME-$GITHUB_SHA
-          
+
       - name: Update manifest file
         run: |
-          # Assuming you have a manifest file named k8s.yaml
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@gmail.com"
           yq eval '.spec.template.spec.containers[0].image = "ausaf0909/node-sample:${{ env.GITHUB_BRANCH }}"' -i deployment/deployment.yaml
